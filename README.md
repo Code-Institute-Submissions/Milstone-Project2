@@ -13,3 +13,4 @@ this on-going Covid19 pandemic. However, I have inspired from " https://jeet-kho
 * Dashboard: Displayed the total cases of the world from the live API
 * Controls:Zoom: A basic zoom control with two buttons (zoom in and zoom out) for the map.
 
+add anything
