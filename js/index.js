@@ -1,25 +1,25 @@
 window.onload = () =>{
 
-    document.querySelector(".countries-list-container").style.display = "none";
+    document.querySelector(".list_container_country").style.display = "none";
     const input = document.querySelector("#country-input");
     input.addEventListener("input", searchCountry);
 }
     var map;
-    var covidData;
+    var coronaData;
     var markers = [];
     var infoWindow;
     var infos = [];
 
-/****************************************
-   FUNCTION : GOOGLE MAP INITIALIZATION
+/***************************************
+ * GOOGLE MAP
  ****************************************/
 async function initMap() {
 
     var response = await axios.get("https://corona.lmao.ninja/v2/countries");
 
-    covidData = response.data;
+    coronaData = response.data;
 
-    showCovidVirusCountries(covidData);
+    displayCountries(coronaData);
     
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -38,18 +38,18 @@ async function initMap() {
 
     infoWindow = new google.maps.InfoWindow();
 
-    showCovidMarkers(covidData);
+    displayMarkers(coronaData);
 
 }
 
 
 /************************************
-   FUNCTION : DISPLAY COUNTRY LISTS
+     DISPLAY COUNTRY LISTS
  ************************************/
-function showCovidVirusCountries(countries) {
+function displayCountries(countries) {
     var countriesHtml = '';
     
-    countries.map((one,index) => {
+    countries.map((one) => {
         countriesHtml += 
         `
             <div id="${one['countryInfo']['_id']}" class="country-container" onclick="clickCountry('${one['countryInfo']['iso2']}')">
@@ -69,13 +69,13 @@ function showCovidVirusCountries(countries) {
         `
     })
 
-    document.querySelector(".countries-list").innerHTML = countriesHtml;
+    document.querySelector(".listofCountries").innerHTML = countriesHtml;
 }
 
 /****************************************
    FUNCTION : SHOW MARKERS IN GOOGLE MAP
  ****************************************/
-function showCovidMarkers(newCovidData) {
+function displayMarkers(newCovidData) {
     newCovidData.map((one, index) => {
 
         var latlng = new google.maps.LatLng(
@@ -86,19 +86,21 @@ function showCovidMarkers(newCovidData) {
         var lastUpdated = new Date(one["updated"]).toLocaleDateString("en");
         var country = one["country"];
         var cases = one["cases"];
+        var active= one["active"]
         var deaths = one["deaths"];
-        var recovered = one["recovered"];
+        var todayDeaths = one["todayDeaths"];
+        var todayCases = one["todayCases"];
         var id = one["countryInfo"]["_id"];
         var iso2 = one["countryInfo"]["iso2"];
         
-        createCovidMarker(latlng, lastUpdated, country, cases, deaths, recovered, id, iso2);
+        createCovidMarker(latlng, lastUpdated, country, cases,active, deaths, todayCases,todayDeaths, id, iso2);
     })
 }
 
 /****************************************
    FUNCTION : GOOGLE MAP MARKER CREATION
  ****************************************/
-function createCovidMarker(latlng, lastUpdated, country, cases, deaths,id, recovered, iso2) {
+function createCovidMarker(latlng, lastUpdated, country, cases, active, deaths, id, todayCases, todayDeaths, iso2) {
     var html = 
     `
         <div class="covid-info-country-container">
@@ -111,9 +113,11 @@ function createCovidMarker(latlng, lastUpdated, country, cases, deaths,id, recov
                 </div>
             </div>
             <div class="info-secondary-container">
-                <div class="info-cases">Cases:&nbsp;${cases}</div>
-                <div class="info-recovered">Recovered:&nbsp;${recovered}</div>
-                <div class="info-death">Deaths:&nbsp;${deaths}</div>
+                <div class="info-cases">Total Cases:&nbsp;${cases}</div>
+                <div class="info-active">Active:&nbsp;${active}</div>
+                <div class="info-todayCases">Today's Cases:&nbsp;${todayCases}</div>
+                <div class="info-todayDeaths">Today's Deaths:&nbsp;${todayDeaths}</div>
+                <div class="info-death">Total Deaths:&nbsp;${deaths}</div>
             </div>
         </div>
     `
@@ -146,7 +150,7 @@ function createCovidMarker(latlng, lastUpdated, country, cases, deaths,id, recov
  ****************************/
 function clickCountry(index) {
     document.getElementById("country-input").value = '';
-    document.querySelector(".countries-list-container").style.display = "none";
+    document.querySelector(".list_container_country").style.display = "none";
     
     var key = index.toString();
     var selectedMarker = markers.find(one => one.label.toLowerCase() === index.toLowerCase())
@@ -162,14 +166,14 @@ function searchCountry() {
     var countryName = document.getElementById("country-input").value;
 
     if (countryName) {
-        document.querySelector(".countries-list-container").style.display = "flex";
+        document.querySelector(".list_container_country").style.display = "flex";
     } else {
-        document.querySelector(".countries-list-container").style.display = "none";
+        document.querySelector(".list_container_country").style.display = "none";
     }
 
     var oldIndex = []
     
-    var countriesResult = covidData.filter((one, index) => {
+    var countriesResult = coronaData.filter((one, index) => {
         if (one["country"].toLowerCase().includes(countryName.toLowerCase())) {
             oldIndex.push(index);
             return true;
@@ -180,7 +184,7 @@ function searchCountry() {
         one["index"] = oldIndex[index];
     })
 
-    showCovidVirusCountries(countriesResult);
+    displayCountries(countriesResult);
 }
 
 /**********************************************

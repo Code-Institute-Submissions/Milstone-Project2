@@ -32,7 +32,7 @@ header{
     font-weight: 600;
 }
 
-.search-container {
+.container_search {
     border-radius: 30px;
     margin-left:10px;
     width: 300px;
@@ -40,7 +40,7 @@ header{
     background-color: #454E53;
 }
 
-.search-container .search {
+.container_search .search {
     flex-grow: 1;
     display: flex;
     font-weight: bold;
@@ -50,7 +50,7 @@ header{
     align-content: justify;
 }
 
-.search-container input {
+.container_search input {
     width: 100%;
     font-size: 25px;
     background-color: transparent;
@@ -59,7 +59,7 @@ header{
     text-align: center;
 }
 
-.search-container input:focus {
+.container_search input:focus {
     outline: none;
 }
 
@@ -69,13 +69,13 @@ header{
     cursor:pointer;
 }
 
-.countries-list-container {
-    width: 200px;
-    height: 200px;
+.list_container_country {
+    width: 300px;
+    height: 400px;
     position: absolute;
     z-index: 100;
     background: #fff;
-    right: 350px;
+    right: 330px;
     top: 60px;
     border-radius: 30px;
     bottom: 20px;
@@ -85,7 +85,7 @@ header{
 
 }
 
-.countries-list-container .countries-list {
+.list_container_country .listofCountries {
     flex-grow: 1;
     overflow-y: scroll;
     padding-left: 20px;
@@ -99,17 +99,17 @@ header{
     color:aqua;
     border-radius:20px;
 }
-/*.countries-list::-webkit-scrollbar {
+.listofCountries::-webkit-scrollbar {
     width: 0px;
 }
 
-.countries-list:hover::-webkit-scrollbar {
+.listofCountries:hover::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar {
     width: 12px;
-}*/
+}
 
 .info-main-container {
     border-bottom: 1px solid #a3a3ab;
@@ -127,30 +127,33 @@ header{
 .info-main-container .info-last-updated {
     font-style: "Niconne",sans-serif;
     margin-top: 2px;
-    color:#cc3300;
+    color:#000000;
     font-weight:300;
 }
 
 .info-secondary-container {
     font-size: 15px;
     margin-top: 5px;
+    font-weight:700;
+    font-family: "Exo",sans-serif;
 }
 
 .info-cases {
-    font-family: "Exo",sans-serif;
-    font-weight: 700;
     color: #0000ff;
 }
+.info-active{
+    color: #003300;
+}
 
-.info-recovered {
-    font-family: "Exo",sans-serif;
-    font-weight: 700;
+.info-todayCases{
+  
     color: #008000;
+}
+.info-todayDeaths{
+    color:#ff6600;
 }
 
 .info-death {
-    font-family: "Exo",sans-serif;
-    font-weight: 700;
     color: #ff0000;
 }
 
@@ -262,8 +265,8 @@ header{
         width: 620px;
     }
 
-    .countries-list-container {
-        left: 65px;
+    .list_container_country {
+        right: 65px;
     }
 
 }
@@ -274,7 +277,7 @@ header{
         top: 165px;
     }
 
-    .countries-list-container {
+    .list_container_country {
         width: 435px;
         top: 250px;
         right: 40px;
