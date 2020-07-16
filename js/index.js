@@ -83,7 +83,7 @@ function displayMarkers(newCovidData) {
             one["countryInfo"]["long"]
         );
 
-        var lastUpdated = new Date(one["updated"]).toLocaleDateString("en");
+        var latestUpdated = new Date(one["updated"]).toLocaleDateString("en");
         var country = one["country"];
         var cases = one["cases"];
         var active= one["active"]
@@ -93,14 +93,14 @@ function displayMarkers(newCovidData) {
         var id = one["countryInfo"]["_id"];
         var iso2 = one["countryInfo"]["iso2"];
         
-        createCovidMarker(latlng, lastUpdated, country, cases,active, deaths, todayCases,todayDeaths, id, iso2);
+        createCovidMarker(latlng, latestUpdated, country, cases, active, deaths, todayCases,todayDeaths, id, iso2);
     })
 }
 
 /****************************************
    FUNCTION : GOOGLE MAP MARKER CREATION
  ****************************************/
-function createCovidMarker(latlng, lastUpdated, country, cases, active, deaths, id, todayCases, todayDeaths, iso2) {
+function createCovidMarker(latlng, latestUpdated, country, cases, active, deaths, id, todayCases, todayDeaths, iso2) {
     var html = 
     `
         <div class="covid-info-country-container">
@@ -109,7 +109,7 @@ function createCovidMarker(latlng, lastUpdated, country, cases, active, deaths, 
                     ${country}
                 </div>
                 <div class="info-last-updated">
-                    <span>Last Updated:&nbsp;</span>${lastUpdated}
+                    <span>Last Updated:&nbsp;</span>${latestUpdated}
                 </div>
             </div>
             <div class="info-secondary-container">
@@ -193,7 +193,9 @@ function searchCountry() {
 function getGlobalData(){
     fetch("https://api.covid19api.com/summary")
     .then(function(response){return response.json()})
+
     .then(function(data){
+
         var totalCases =data.Global.TotalConfirmed;
         var newCases =data.Global.NewConfirmed;
         var totalRecovered=data.Global.TotalRecovered;
@@ -202,7 +204,7 @@ function getGlobalData(){
 
         document.getElementById('cases').innerHTML=totalCases;
         document.getElementById('newCases').innerHTML= newCases;
-         document.getElementById('recovered').innerHTML= totalRecovered;
+        document.getElementById('recovered').innerHTML= totalRecovered;
         document.getElementById('deaths').innerHTML= totalDeaths;
     });
     

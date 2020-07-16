@@ -2,56 +2,74 @@
 
 
 body {
-    font-family: "Oswald", sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
 }
-
+/*******************************
+        Google Map
+**********************************/
 
 #map {
-
+    margin:0;
+    padding:0;
     width: 100%;
     height: 100%;
 }
+
+/**********************************
+        Header and navbar
+**********************************/
+
 header{
-    background-color: #cc3300;
-    margin-bottom:5px;
-    display:flex;
+    background-color: #520518;
 }
 
-.title {
+.sitename {
     font-family: "Exo", sans-serif;
     font-size: 30px;
     color: #ffffcc;
     text-transform: uppercase;
-    left: 50px;
-    top: 50px;
+  
     padding: 10px;
     font-weight: 600;
 }
+.sitename i{
+    color: #00ff00;
+}
+
+.nav-link{
+    font-family:"Exo",sans-serif;
+    font-size:25px;
+    border: 2px solid white;
+    font-weight: 400;
+    color:aqua;
+    border-radius:20px;
+}
+/**************************************
+            search bar
+*************************************/
 
 .container_search {
     border-radius: 30px;
     margin-left:10px;
     width: 300px;
-    height: 40px;
+    height: 50px;
     background-color: #454E53;
 }
 
 .container_search .search {
-    flex-grow: 1;
     display: flex;
     font-weight: bold;
     align-items: center;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    align-content: justify;
+    justify-content: center;
 }
 
-.container_search input {
-    width: 100%;
+.container_search input {  
     font-size: 25px;
     background-color: transparent;
     border: none;
@@ -64,10 +82,15 @@ header{
 }
 
 .search i {
+    padding-right:20px;
     font-size: 25px;
     color: #fff;
     cursor:pointer;
 }
+
+/*****************************************
+        Country name container
+****************************************/
 
 .list_container_country {
     width: 300px;
@@ -75,15 +98,24 @@ header{
     position: absolute;
     z-index: 100;
     background: #fff;
-    right: 330px;
-    top: 60px;
+    left: 20px;
+    top:80px;
     border-radius: 30px;
-    bottom: 20px;
     display:none;
     overflow-y: hidden;
     padding-bottom: 30px;
 
 }
+
+@media only screen and ( min-width: 775px ) {
+
+    .list_container_country {
+        right: 20px;
+        top: 140px;
+    }
+   
+}
+
 
 .list_container_country .listofCountries {
     flex-grow: 1;
@@ -91,14 +123,7 @@ header{
     padding-left: 20px;
     padding-right: 20px;
 }
-.nav-link{
-    font-family:"Exo",sans-serif;
-    font-size:25px;
-    border: 2px solid white;
-    font-weight: 400;
-    color:aqua;
-    border-radius:20px;
-}
+
 .listofCountries::-webkit-scrollbar {
     width: 0px;
 }
@@ -223,7 +248,7 @@ header{
     justify-content: center;
    }
 .card{
-    width:84%;
+    width:100%;
     padding:8%;
     margin-bottom:20px;
     justify-content: center;
@@ -255,26 +280,24 @@ header{
    text-align: center;
 }
 
-/* Mobile/Tablet Responsive Styles */
+/******* Mobile/Tablet Responsive Styles ***
 @media only screen and ( max-width: 775px ) {
-    .title {
-        font-size: 45px;
-    }
-
-    .search-container {
+   
+    .container_search {
         width: 620px;
     }
 
     .list_container_country {
-        right: 65px;
+        left: 20px;
+        top:100px
     }
 
 }
 
 @media only screen and ( max-width: 675px ) {
-    .search-container {
+    .container_search {
         width: 400px;
-        top: 165px;
+        height: 400px;
     }
 
     .list_container_country {
