@@ -1,4 +1,4 @@
-customGMapStyles = [
+ var customGMapStyles = [
               {
                 elementType: "geometry",
                 stylers: [

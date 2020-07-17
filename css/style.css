@@ -92,7 +92,7 @@ header{
         Country name container
 ****************************************/
 
-.list_container_country {
+.list-container-country {
     width: 300px;
     height: 400px;
     position: absolute;
@@ -109,7 +109,7 @@ header{
 
 @media only screen and ( min-width: 775px ) {
 
-    .list_container_country {
+    .list-container-country {
         right: 20px;
         top: 140px;
     }
@@ -117,7 +117,7 @@ header{
 }
 
 
-.list_container_country .listofCountries {
+.list-container-country .listofCountries {
     flex-grow: 1;
     overflow-y: scroll;
     padding-left: 20px;

@@ -12,7 +12,11 @@ __User Stories__
 https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=1%3A3 - automatic!
 [GitHub](http://github.com)
 
-### Features
+### Frameworks and responsiveness
+https://files.slack.com/files-pri/T0L30B202-F0170PQF5K7/screen_shot_2020-07-14_at_4.09.35_pm.png _ autometic!
+[GitHub](http://github.com)
+
+## Features
 * __Worldmap__: Google Map has used with map-tile layer and styled in Night mode.
 * __Search Country__: with the jquery a search country bar used to search specific country name and a pop-up window appears with data.
 * __Marker__: Google map default marker used to display clickable icon on map.
@@ -21,6 +25,34 @@ https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=1%3A3 -
 * __Controls__: A basic zoom control with two buttons (zoom in and zoom out) for the map.
 * __Guidelines__: a clickable button at top will recomend users to WHO Guidelines Page for the Pandemic. 
 
+#### Features to be
+ * I would like to add more efficient and reliable API for better user Experiences.
+ * Adding Graph to show data over timeline would be a good feature.
+ * Zoom in feature upon clicking search bar would more accurate via better API(lattitude and longitude)
+
+ ## Technologies Used
+* __HTML__: HTML for structure or used as shell of site
+* __CSS__: Cascading Style Sheet for styling and design
+* __Bootstrap__: Framework from Bootstrap
+* __Javascript__: For all user Interactions
+* __JQuery__: To simplify DOM manipulation
+* __GoogleMap__: An open source Javascript API for interactive map
+* __Axois__: provides a single API for dealing with XMLHttpRequests
+* __Font-awesome__
+* __Google-front__
+* __Google Chrome__: Used for dev tools and browser
+* __Mozila Firefox__:Used for browser
+* __Google__: Used for research
+* __Git__: For Version control
+* __Github__: Repository host
+* __Github Page__: Website host
 
 
-add anything
+ ## Testing 
+ 
+ ## Deployment 
+
+ ## Credit
+
+
+

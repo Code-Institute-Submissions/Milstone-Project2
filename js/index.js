@@ -1,20 +1,23 @@
 window.onload = () =>{
 
-    document.querySelector(".list_container_country").style.display = "none";
+    document.querySelector(".list-container-country").style.display = "none";
     const input = document.querySelector("#country-input");
     input.addEventListener("input", searchCountry);
-}
+};
     var map;
     var coronaData;
     var markers = [];
     var infoWindow;
     var infos = [];
+    var axios;
+    var google;
+  	var customGMapStyles;
 
 /***************************************
  * GOOGLE MAP
  ****************************************/
 async function initMap() {
-
+    
     var response = await axios.get("https://corona.lmao.ninja/v2/countries");
 
     coronaData = response.data;
@@ -124,16 +127,17 @@ function createCovidMarker(latlng, latestUpdated, country, cases, active, deaths
 
     infos[iso2] = html;
 
-    var image = {
-    
-        scaledSize: new google.maps.Size(50, 50)
+    var icon = {
+        url:"https://maps.gstatic.com/mapfiles/ms2/micons/red.png",
+        origin: new google.maps.Point(0, -10),
+        scaledSize: new google.maps.Size(50, 60)
     }
 
     var marker = new google.maps.Marker({
         map: map,
         position: latlng,
         label: iso2 + '',
-        icon: image,
+        icon: icon,
         abc: "ahihi"
     });
 
@@ -150,14 +154,14 @@ function createCovidMarker(latlng, latestUpdated, country, cases, active, deaths
  ****************************/
 function clickCountry(index) {
     document.getElementById("country-input").value = '';
-    document.querySelector(".list_container_country").style.display = "none";
+    document.querySelector(".list-container-country").style.display = "none";
     
     var key = index.toString();
     var selectedMarker = markers.find(one => one.label.toLowerCase() === index.toLowerCase())
     infoWindow.setContent(infos[key]);
     infoWindow.open(map, selectedMarker);
     
-}
+};
 
 /****************************
    FUNCTION : SEARCH COUNTRY
@@ -166,9 +170,9 @@ function searchCountry() {
     var countryName = document.getElementById("country-input").value;
 
     if (countryName) {
-        document.querySelector(".list_container_country").style.display = "flex";
+        document.querySelector(".list-container-country").style.display = "flex";
     } else {
-        document.querySelector(".list_container_country").style.display = "none";
+        document.querySelector(".list-container-country").style.display = "none";
     }
 
     var oldIndex = []
