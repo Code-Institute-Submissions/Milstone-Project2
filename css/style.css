@@ -4,8 +4,9 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow-y:overlay;
 }
 /*******************************
         Google Map
@@ -24,6 +25,7 @@ body {
 
 header{
     background-color: #520518;
+    width:100vw;
 }
 
 .sitename {
@@ -98,7 +100,7 @@ header{
     position: absolute;
     z-index: 100;
     background: #fff;
-    left: 20px;
+    right: 20px;
     top:80px;
     border-radius: 30px;
     display:none;
@@ -107,13 +109,11 @@ header{
 
 }
 
-@media only screen and ( min-width: 775px ) {
-
-    .list-container-country {
-        right: 20px;
-        top: 140px;
+@media  screen and (max-width: 775px){
+    .list-container-country{
+         left: 40px;
+         top:140px;
     }
-   
 }
 
 
