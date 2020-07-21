@@ -1,38 +1,37 @@
 # Milstone-Project2
-
 It is an app on live tracking of recent Covid19 cases worldwide based on Google map along with javascript.
-It shows the latest data using live Covid19 cases APIs, it can use by anyone, and based on user search it displays the selected country 
-with covid19 cases e.x: Total cases, Recovered and Deaths in number as well as total update cases for the whole world. Individual country's 
-information can be displayed by click on each country's marker. The site also has a reference link TO the World Health Organisation(WHO) which 
-can provide important information and guidelines during this on-going Covid19 pandemic. 
+It shows the latest data using live Covid19 cases APIs, it can use by anyone, and based on user search it displays the selected country with covid19 cases e.x: Total cases, Recovered and Deaths in number as well as total update cases for the whole world. Individual country's information can be displayed by click on each country's marker. The site also has a reference link TO the World Health Organisation(WHO) which can provide important information and guidelines during this on-going Covid19 pandemic. 
 
 ## UX
-Expected users of the website could be any individuals who want know about the covid19 pandemic locally or globally.
+Expected users of the website could be any individuals who want to know about the covid19 pandemic locally or globally.
 __User Stories__
 1. Seun Owonikoko (mentor) - She searched her country Nigeria's recent cases and at the same time compared the pandemic between several countries(e.x: Estonia, India, Bangladesh).
-2. Aziz Kaura 32 - "It's interesting to see the map and data at the same time, now I can search and find out cases for any country".
-3. 
+2. Aziz Kaura 32, France - "It's interesting to see the map and data at the same time, now I can search and find out cases for any country".
+3. Momotaj 35(Data-scientist, NZ) -" COVID-19 WORLDWIDE TRACKER is a very interactive dashboard and provides real-time statistics about Covid-19 across the globe.
+ The page is very attractive and readable. I liked the developing pattern of the website which is giving active filtering options by countries, and a summary of the total case of the world. " 
 ### Wireframes
-https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=1%3A3 - automatic!
-[GitHub](http://github.com)
+* Figma layout:(https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=1%3A3)
+* Layout Large screen:
+![Layout LargeScreen](/images/layoutBigsc.png)
+* Layout Small screen:
+![layout SmallScreen](/images/layoutSmallsc.png)
 
-### Frameworks and responsiveness
-https://files.slack.com/files-pri/T0L30B202-F0170PQF5K7/screen_shot_2020-07-14_at_4.09.35_pm.png _ autometic!
-[GitHub](http://github.com)
+### Frameworks and responsivenes
+![Responsive design](/images/responsive.png)
 
 ## Features
 * __Worldmap__: Google Map has used with map-tile layer and styled in Night mode.
 * __Search Country__: with the jquery a search country bar used to search specific country name and a pop-up window appears with data.
-* __Marker__: Google map default marker used to display clickable icon on map.
-* __Info-window__: An Ifno-window used to show the data of individual country on map via API.
+* __Marker__: Google map default marker used to display a clickable icon on the map.
+* __Info-window__: An Info-window used to show the data of individual countries on the map via API.
 * __Dashboard__: Displayed the total cases of the world from the live API.
 * __Controls__: A basic zoom control with two buttons (zoom in and zoom out) for the map.
-* __Guidelines__: a clickable button at top will recomend users to WHO Guidelines Page for the Pandemic. 
+* __Guidelines__: a clickable button at the top will recommend users to WHO Guidelines Page for the Pandemic. 
 
 #### Features to be
- * I would like to add more efficient and reliable API for better user Experiences.
- * Adding Graph to show data over timeline would be a good feature.
- * Zoom in feature upon clicking search bar would more accurate via better API(lattitude and longitude)
+ * I would like to add a more efficient and reliable API for better User Experiences.
+ * Adding Graphs to show data over a timeline would be a good feature.
+ * Zoom in feature upon clicking search bar would more accurate via better API(latitude and longitude)
 
  ## Technologies Used
 * __Figma__: The collaborative interface design tool.
@@ -55,9 +54,9 @@ https://files.slack.com/files-pri/T0L30B202-F0170PQF5K7/screen_shot_2020-07-14_a
 
  ## Testing 
 
-* __HTML Validator__:
-* __CSS validator__:
-* __Javascript Validator__:
+* __HTML Validator__: https://validator.w3.org/
+* __CSS validator__:https://validator.w3.org/
+* __Javascript Validator__:https://jshint.com/
 * __The site was tested in several devices for validate the UX features inculding__:
     * Dekstop
     * Laptop
@@ -70,16 +69,16 @@ https://files.slack.com/files-pri/T0L30B202-F0170PQF5K7/screen_shot_2020-07-14_a
  ## Deployment 
  The project is hosted on Github.
 
-1. AT first host a git repository on GitHub.
-2. The project contains README.md,index.html, js,css files.
-3. The css folder contains style.css file.
+1. AT first, host a git repository on GitHub.
+2. The project contains README.md,index.html, js, CSS files.
+3. The CSS folder contains a style.css file.
 4. the js folder contains index.js and map-style.js.
-5. Move to GitHub Pages section on GitHub repository settings page.
-6. On the setting page change the source to 'master branch' or any other desired branch.
+5. Move to the GitHub Pages section on the GitHub repository settings page.
+6. On the setting, page changes the source to 'master branch' or any other desired branch.
 7. The appeared link would be the project home page (index.html).
 8. My repository can be found here:
     * Repo:https://github.com/himaldew/Milstone-Project2
-9. The live site can found on: https://himaldew.github.io/Milstone-Project2/
+9. The live site can found on https://himaldew.github.io/Milstone-Project2/
 
  ## Credit
   * I am highly inspired by "https://jeet-khondker.github.io/covid19-live-tracker/". (major code source)
@@ -93,9 +92,12 @@ https://files.slack.com/files-pri/T0L30B202-F0170PQF5K7/screen_shot_2020-07-14_a
   * https://stackoverflow.com/
 
 ## Acknowledgements
-Thank you to the following for inspiration, motivation and the direction I needed:
+Thank you to the following for inspiration, motivation, and the direction I needed:
 
 * Jeet-Khondker(covid19 live tracker)
 * Seun Owonikoko @seun_mentor
 * Tutor Assistant-Code Institute
 
+**N.B**: It has been a really hard time for me to continue the course while I was in another country and got stuck in lockdown. I was thinking of quitting
+the course in the middle of the project because of the complexity of the Javascript language. And I deleted two previous Repository out of frustration and anger.
+I think I need more time and practical work to be a master in Javascript
