@@ -12,26 +12,26 @@
          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    </head>
    <body >
-      <!--Header and Navbar-->
+                                        <!--Header and Navbar-->
       <header class=" navbar">
          <h1 class="title">COVID-19 Worldwide <i class="fas fa-virus"></i> Tracker</h1>
          <a class="nav-link"  target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance">Guidlines</a>
-         <!------------------------Search bar for country-------------------->
+                                    <!--Search bar for country-->
          <div class="container_search">
             <div class="search">
                <input class="display-4 text-center" id="country-input" type="text" placeholder="Enter Country Name">
                <i class="fas fa-search" onclick="searchCountry()"></i>
             </div>
          </div>
-         <!-------------------------Country Container board------------------>   
+                                    <!--Country Container board-->   
          <div class="list-container-country">
             <div class="listofCountries">
             </div>
          </div>
       </header>
-      <!-----------------------------GOogle map initialisation---------------------->
+                                <!--GOogle map initialisation-->
       <div id="map"></div>
-      <!------------------------------------Worldwide cases dasboard------------------>
+                                 <!--Worldwide cases dasboard-->
       <div class="container-dashboard">
          <h1 class="globalcasesTitle ">The Covid19 cases globally</h1>
          <div id="board">
@@ -50,7 +50,7 @@
                <h5>Total Recovered</h5>
                <span id="recovered"></span>
             </div>
-            <div class="card d">
+            <div class=" card d">
                <i class='fa fa-times'></i>
                <h5>Total Deaths</h5>
                <span id="deaths"></span>

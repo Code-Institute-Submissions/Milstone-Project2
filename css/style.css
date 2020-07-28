@@ -6,7 +6,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    overflow-y:overlay;
+    overflow:overlay;
 }
 /*******************************
         Google Map
@@ -65,6 +65,7 @@ header{
     }
     .container_search {
          margin:0 auto;
+         margin-top:10px;
          height: 30px;
     }
     
@@ -104,7 +105,7 @@ header{
 }
 
 .search i {
-    padding-right:20px;
+    padding-right:40px;
     font-size: 25px;
     color: #fff;
     cursor:pointer;
@@ -129,14 +130,6 @@ header{
 
 }
 
-@media  screen and (max-width: 775px){
-    .list-container-country{
-         left: 40px;
-         top: 200px;
-    }
-}
-
-
 .list-container-country .listofCountries {
     flex-grow: 1;
     overflow-y: scroll;
@@ -149,11 +142,11 @@ header{
 }
 
 .listofCountries:hover::-webkit-scrollbar {
-    width: 12px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 0px;
 }
 
 .info-main-container {
@@ -267,10 +260,16 @@ header{
 ***********************/
 
 #board{
-    column-count: 2;
     column-gap: 1em;
     justify-content: center;
+    margin:10px;
+}
+ @media  screen and (min-width: 600px){
+   #board{
+       column-count:2;
    }
+}
+
 .card{
     width:100%;
     padding:8%;
@@ -309,4 +308,10 @@ footer{
     font-weight: 400;
     float:right;
     margin-right:10px;
+}
+@media  screen and (max-width: 775px){
+    .list-container-country{
+         left: 40px;
+         top: 200px;
+    }
 }

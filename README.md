@@ -4,20 +4,26 @@ It shows the latest data using live Covid19 cases APIs, it can use by anyone, an
 
 ## UX
 Expected users of the website could be any individuals who want to know about the covid19 pandemic locally or globally.
+__Goals__
+* The main goal is to provide platform for users to know more about the ongoing covid19 pandemic around the globe.
+* To make an interactive website with Javascript,Google map Api and the current live data from various APIs source.
+* To make visual for all available cases about Covid19 and give an overview of each and every country.
+* To create a design that would be responsive.
+
 __User Stories__
 1. Seun Owonikoko (mentor) - She searched her country Nigeria's recent cases and at the same time compared the pandemic between several countries(e.x: Estonia, India, Bangladesh).
 2. Aziz Kaura 32, France - "It's interesting to see the map and data at the same time, now I can search and find out cases for any country".
 3. Momotaj 35(Data-scientist, NZ) -" COVID-19 WORLDWIDE TRACKER is a very interactive dashboard and provides real-time statistics about Covid-19 across the globe.
- The page is very attractive and readable. I liked the developing pattern of the website which is giving active filtering options by countries, and a summary of the total case of the world. " 
-### Wireframes
-* Figma layout:(https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=1%3A3)
-* Layout Large screen:
-![Layout LargeScreen](/images/layoutBigsc.png)
-* Layout Small screen:
-![layout SmallScreen](/images/layoutSmallsc.png)
+ The page is very attractive and readable. I liked the developing pattern of the website which is giving active filtering options by countries, and a summary of the total case of the world."
+4. Tusher 22 - " Now I can follow the corona virus cases of my country and can evaluate the situation".
+5. Sohag 25 - He searched the data for some countries in his Iphone-8 and the site was working well.
 
 ### Frameworks and responsivenes
 ![Responsive design](/images/responsive.png)
+
+### Wireframes
+* Figma layout:https://www.figma.com/file/D494G7ujMm0HjOu5rkzOw1/Covid-19-cases?node-id=0%3A1- automatic!
+
 
 ## Features
 * __Worldmap__: Google Map has used with map-tile layer and styled in Night mode.
@@ -35,15 +41,17 @@ __User Stories__
 
  ## Technologies Used
 * __Figma__: The collaborative interface design tool.
+    * https://www.figma.com/
 * __HTML__: HTML for structure or used as shell of site
 * __CSS__: Cascading Style Sheet for styling and design
 * __Bootstrap__: Framework from Bootstrap
+    * https://getbootstrap.com/
 * __Javascript__: For all user Interactions
 * __JQuery__: To simplify DOM manipulation
-* __GoogleMap__: An open source Javascript API for interactive map
+* __GoogleMap API__: An open source Javascript API for interactive map
 * __Axois__: provides a single API for dealing with XMLHttpRequests
-* __Font-awesome__
-* __Google-front__
+* __Font-awesome__: https://fontawesome.com/
+* __Google-front__: https://fonts.google.com/
 * __Google Chrome__: Used for dev tools and browser
 * __Mozila Firefox__:Used for browser
 * __Google__: Used for research
@@ -53,11 +61,14 @@ __User Stories__
 
 
  ## Testing 
-
 * __HTML Validator__: https://validator.w3.org/
-* __CSS validator__:https://validator.w3.org/
+    No errors or warnings to show.
+
+* __CSS validator__:https://jigsaw.w3.org/css-validator/validator
+
 * __Javascript Validator__:https://jshint.com/
-* __The site was tested in several devices for validate the UX features inculding__:
+
+* The site was tested in several devices for validate the UX features inculding:
     * Dekstop
     * Laptop
     * Ipad and Ipad pro screen using dev tool in google Chrome
@@ -65,10 +76,14 @@ __User Stories__
     * Huawei P20
     * Galaxy S7
     * Samsung A5
+    * Testing compatibility with different browsers
+       I manually tested the website on the following web browsers:
+        * Google Chrome
+        * Mozilla Firefox
+        * Apple Safari
 
  ## Deployment 
  The project is hosted on Github.
-
 1. AT first, host a git repository on GitHub.
 2. The project contains README.md,index.html, js, CSS files.
 3. The CSS folder contains a style.css file.
@@ -98,6 +113,3 @@ Thank you to the following for inspiration, motivation, and the direction I need
 * Seun Owonikoko @seun_mentor
 * Tutor Assistant-Code Institute
 
-**N.B**: It has been a really hard time for me to continue the course while I was in another country and got stuck in lockdown. I was thinking of quitting
-the course in the middle of the project because of the complexity of the Javascript language. And I deleted two previous Repository out of frustration and anger.
-I think I need more time and practical work to be a master in Javascript
